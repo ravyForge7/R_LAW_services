@@ -1,0 +1,89 @@
+/* =========================
+   CSS for Rafay — Law Firm
+   ========================= */
+
+/* basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; } /* single-line reset */
+
+/* body setup */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif; /* readable font */
+  color: #16222a; /* dark text for legibility */
+  background: linear-gradient(180deg, #f7fbfd 0%, #ffffff 100%); /* soft background */
+  line-height: 1.6; /* comfortable linespace */
+}
+
+/* navbar styling */
+/* nav-dark provides dark background for top bar */
+.nav-dark { background: linear-gradient(90deg,#0b2936,#153843); } /* subtle gradient */
+.navbar .brand { color: #ffdf6b; } /* brand color */
+.brand-strong { font-weight: 700; color: #fff; } /* owner name */
+.brand-light { color: #ffdf6b; font-weight: 600; } /* secondary brand text */
+.navbar .nav-link { color: rgba(255,255,255,0.85); margin-left: 8px; } /* nav links */
+.navbar .nav-link:hover, .navbar .nav-link.active { color: #ffdf6b; } /* hover highlight */
+
+/* hero */
+.hero {
+  height: 78vh; /* hero occupies large viewport */
+  background:linear-gradient(135deg, #203a43, #2c5364, #0f2027, #203a43, #2c5364),
+              url('https://images.unsplash.com/photo-1508385082359-f6fdfc2e9f6d') center/cover no-repeat; /* background image */
+  display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+}
+.hero-inner { max-width: 900px; padding: 40px; } /* constrain text */
+.hero-title { font-size: 2.8rem; margin-bottom: 10px; letter-spacing: 1px; } /* main headline */
+.hero-sub { font-size: 1.1rem; opacity: 0.95; margin-bottom: 18px; } /* subtitle */
+.hero-cta .btn { margin: 0 8px; border-radius: 30px; padding: 10px 22px; } /* button look */
+.btn-primary { background: #ffdf6b; color: #072027; border: none; } /* yellow primary */
+.btn-outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+
+/* intro cards */
+.intro { padding: 40px 0; } /* section padding */
+.intro-grid { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; } /* layout */
+.intro-card { background: #fff; padding: 20px; border-radius: 12px; width: 200px; box-shadow: 0 8px 24px rgba(3,20,30,0.06); } /* card look */
+.intro-card h3 { color: #032a2f; margin-bottom: 6px; } /* large number style */
+.intro-card p { color: #3b5b5f; } /* small text */
+
+/* services grid */
+.services-preview { padding: 30px 0;  } /* spacing */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 20px; height: 37vh;} /* responsive cards */
+.service-card { background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(3,20,30,0.05); transition: transform .25s ease, box-shadow .25s ease; } /* hover effect */
+.service-card:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(3,20,30,0.08); } /* lift on hover */
+.service-card h4 { color: #072027; margin-bottom: 10px; } /* card title */
+.service-card p { color: #385a5e; margin-bottom: 12px; } /* card description */
+.service-card .link { color: #ff6b00; text-decoration: none; font-weight: 600; } /* CTA link */
+
+/* featured cases */
+.featured { padding: 30px 0; } /* section spacing */
+.case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;  } /* responsive */
+.case-card { background: linear-gradient(180deg,#ffffff,#f8fdfd); padding: 18px; border-radius: 12px; box-shadow: 0 8px 20px rgba(2,16,18,0.04); } /* subtle shading */
+.case-card h5 { color: #072027; margin-bottom: 8px; } /* case title */
+
+/* contact CTA bar */
+.contact-cta { background: linear-gradient(90deg,#e9f7f6,#f9fff9) ; padding: 18px 0; margin-top: 20px; border-radius: 8px; } /* callout */
+.contact-cta p { font-weight: 600; color: #052e30; }
+
+/* page sections common */
+.page-section { padding: 100px 15px; max-width: 1000px; margin: 0 auto; } /* layout container */
+.cards-grid { display: grid; gap: 18px; } /* reuse */
+
+/* case list and details */
+.case-list { display: flex; flex-direction: column; gap: 14px; }
+.case-item { background: #fff; padding: 14px; border-radius: 10px; box-shadow: 0 6px 18px rgba(10,20,20,0.04); }
+
+/* contact form */
+.contact-form { display: flex; flex-direction: column; gap: 12px; max-width: 520px; margin-top: 18px; }
+.contact-form input, .contact-form textarea { padding: 10px; border-radius: 8px; border: 1px solid #d6e8e8; }
+
+/* footer */
+.site-footer { background: #082B2B; color: #cfeeea; padding: 18px 0; text-align: center; margin-top: 30px; }
+
+/* responsiveness adjustments */
+@media (max-width: 768px) {
+  .hero-title { font-size: 1.8rem; } /* smaller hero on mobile */
+  .intro-grid { flex-direction: column; align-items: center; } /* stack intro cards */
+  .cards-grid { grid-template-columns: 1fr; } /* single column cards */
+  .hero { height: 60vh; } /* reduce hero height */
+}
+
+/* small utility classes */
+.lead { color: #284c4e; font-size: 1.05rem; } /* small subtitle styling */
